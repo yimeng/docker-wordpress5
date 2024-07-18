@@ -6,9 +6,9 @@ FROM php:5.4.34-apache
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 # 下载 WordPress 5.1.17 并解压到 Apache 服务器的根目录
-RUN curl -O https://wordpress.org/wordpress-5.1.17.tar.gz \
-    && tar -xvf wordpress-5.1.17.tar.gz -C /var/www/html --strip-components=1 \
-    && rm wordpress-5.1.17.tar.gz
+RUN curl -O https://wordpress.org/wordpress-5.1.19.tar.gz \
+    && tar -xvf wordpress-5.1.19.tar.gz -C /var/www/html --strip-components=1 \
+    && rm wordpress-5.1.19.tar.gz
 
 # 更改文件所有权和权限以适应 Apache
 #RUN chown -R www-data:www-data /var/www/html \
